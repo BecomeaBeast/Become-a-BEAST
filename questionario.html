@@ -1,106 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuestionario - Become a BEAST</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuestionario Personalizado</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Cuestionario de Bienvenida</h1>
-        <p>Por favor, contesta a las siguientes preguntas para obtener tu plan personalizado.</p>
-    </header>
+  <div class="container">
+    <h1>Completa tu Cuestionario</h1>
+    <form id="cuestionario-form">
 
-    <!-- Main Content -->
-    <main>
-        <section class="form-container">
-            <form id="questionnaire">
-                <!-- Pregunta 1 -->
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required />
 
-                <!-- Pregunta 2 -->
-                <label for="age">Edad:</label>
-                <input type="number" id="age" name="age" required>
+      <label for="datos">Edad / Sexo / Altura / Peso</label>
+      <input type="text" id="datos" name="datos" placeholder="Ej: 20 años / Hombre / 1.80m / 75kg" required />
 
-                <label for="sex">Sexo:</label>
-                <select id="sex" name="sex" required>
-                    <option value="masculino">Masculino</option>
-                    <option value="femenino">Femenino</option>
-                    <option value="otro">Otro</option>
-                </select>
+      <label for="experiencia">Nivel de experiencia</label>
+      <select id="experiencia" name="experiencia" required>
+        <option value="">Selecciona</option>
+        <option value="principiante">Principiante</option>
+        <option value="intermedio">Intermedio</option>
+        <option value="avanzado">Avanzado</option>
+      </select>
 
-                <!-- Pregunta 3 -->
-                <label for="height">Altura (en cm):</label>
-                <input type="number" id="height" name="height" required>
+      <label for="objetivo">Objetivo principal</label>
+      <select id="objetivo" name="objetivo" required>
+        <option value="">Selecciona</option>
+        <option value="perder_grasa">Perder grasa</option>
+        <option value="ganar_musculo">Ganar músculo</option>
+        <option value="mantener">Mantener</option>
+      </select>
 
-                <label for="weight">Peso (en kg):</label>
-                <input type="number" id="weight" name="weight" required>
+      <label for="dias">Días disponibles por semana</label>
+      <input type="number" id="dias" name="dias" min="1" max="7" required />
 
-                <!-- Pregunta 4 -->
-                <label for="experience">Nivel de experiencia:</label>
-                <select id="experience" name="experience" required>
-                    <option value="principiante">Principiante</option>
-                    <option value="intermedio">Intermedio</option>
-                    <option value="avanzado">Avanzado</option>
-                </select>
+      <label for="tiempo">Tiempo por día</label>
+      <select id="tiempo" name="tiempo" required>
+        <option value="">Selecciona</option>
+        <option value="30min">30 min</option>
+        <option value="45min">45 min</option>
+        <option value="1h">1 hora</option>
+      </select>
 
-                <!-- Pregunta 5 -->
-                <label for="goal">Objetivo principal:</label>
-                <select id="goal" name="goal" required>
-                    <option value="perder_grasa">Perder grasa</option>
-                    <option value="ganar_musculo">Ganar músculo</option>
-                    <option value="mantener">Mantener</option>
-                </select>
+      <label for="material">Acceso a material</label>
+      <select id="material" name="material" required>
+        <option value="">Selecciona</option>
+        <option value="casa">Casa</option>
+        <option value="gimnasio">Gimnasio</option>
+        <option value="mixto">Mixto</option>
+      </select>
 
-                <!-- Pregunta 6 -->
-                <label for="days_per_week">Días disponibles por semana:</label>
-                <input type="number" id="days_per_week" name="days_per_week" required>
+      <label for="restricciones">Restricciones alimentarias</label>
+      <input type="text" id="restricciones" name="restricciones" placeholder="Ej: Sin gluten, vegano..." />
 
-                <!-- Pregunta 7 -->
-                <label for="time_per_day">Tiempo disponible por día:</label>
-                <select id="time_per_day" name="time_per_day" required>
-                    <option value="30">30 min</option>
-                    <option value="45">45 min</option>
-                    <option value="60">1h</option>
-                </select>
+      <label for="salud">Problemas de salud o lesiones</label>
+      <textarea id="salud" name="salud" rows="3" placeholder="Describe si hay algo relevante"></textarea>
 
-                <!-- Pregunta 8 -->
-                <label for="material_access">Acceso a material:</label>
-                <select id="material_access" name="material_access" required>
-                    <option value="casa">Casa</option>
-                    <option value="gimnasio">Gimnasio</option>
-                    <option value="mixto">Mixto</option>
-                </select>
+      <label for="preferencias">Preferencias (cardio, fuerza, movilidad)</label>
+      <input type="text" id="preferencias" name="preferencias" />
 
-                <!-- Pregunta 9 -->
-                <label for="dietary_restrictions">Restricciones alimentarias:</label>
-                <input type="text" id="dietary_restrictions" name="dietary_restrictions">
+      <label for="comidas">¿Qué comidas haces normalmente? (2, 3, 5...)</label>
+      <input type="text" id="comidas" name="comidas" required />
 
-                <!-- Pregunta 10 -->
-                <label for="health_problems">Problemas de salud o lesiones:</label>
-                <input type="text" id="health_problems" name="health_problems">
-
-                <!-- Pregunta 11 -->
-                <label for="preferences">Preferencias:</label>
-                <input type="text" id="preferences" name="preferences">
-
-                <!-- Pregunta 12 -->
-                <label for="meals_per_day">¿Qué comidas haces normalmente?</label>
-                <input type="text" id="meals_per_day" name="meals_per_day" required>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Become a BEAST. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="app.js"></script>
+      <button type="submit">Enviar cuestionario</button>
+    </form>
+  </div>
 </body>
 </html>
