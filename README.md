@@ -1,2 +1,2 @@
 # Become a BEAST
-Proyecto base generado automáticamente.
+Proyecto para crear rutinas personalizadas de ejercicio y dieta.
